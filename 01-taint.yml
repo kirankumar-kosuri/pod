@@ -4,18 +4,19 @@ metadata:
   name: nginx
   labels:
     project: roboshop
-    environment: development
+    purpose: dp-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
+      purpose: dp-demo
       project: roboshop
-      environment: development
   template:
     metadata:
       labels:
+        purpose: dp-demo
         project: roboshop
-        environment: development
+
     spec:
       containers:
       - name: nginx
