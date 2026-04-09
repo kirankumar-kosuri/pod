@@ -1,27 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: taint-tolerations
+  name: taints-tolerations
+  # these are replica set labels
   labels:
-    project: roboshop
-    environment: development
     purpose: tolerations-demo
+    project: roboshop
 spec:
   replicas: 1
   selector:
+    # these labels are used to select pods
     matchLabels:
-      project: roboshop
-      environment: development
       purpose: tolerations-demo
+      project: roboshop
+  # pod definition
   template:
     metadata:
       labels:
-        project: roboshop
-        environment: development
+        # purpose: dp-demo
         purpose: tolerations-demo
+        project: roboshop
     spec:
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-22-110.ec2.internal                                                                                                            │
+        kubernetes.io/hostname: ip-192-168-22-110.ec2.internal
       containers:
       - name: nginx
         image: nginx:latest
