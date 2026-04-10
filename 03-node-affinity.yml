@@ -8,42 +8,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: topology.kubernetes.io/zone
+          - key:  topology.kubernetes.io/zone
             operator: In
             values:
-            - us-east-1f
-
-          # - key: disktype
-          #   operator: In
-          #   values:
-          #   - ssd       
-
-      preferredDuringSchedulingIgnoredDuringExecution:
-        - weight: 10
-          preference:
-            matchExpressions:
-            - key: project
-              operator: In
-              values:
-              - roboshop
-        - weight: 20
-          preference:
-            matchExpressions:
-            - key: project
-              operator: In
-              values:
-              - amazon
-
-
-
-
-
-
-
-
-
-
-
+            - us-east-1c              
   containers:
   - name: nginx
     image: nginx
