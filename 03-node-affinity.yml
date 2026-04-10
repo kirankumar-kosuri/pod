@@ -24,8 +24,8 @@ spec:
             operator: In
             values:
             - docker 
-          - weight: 100
-          preference:
+      - weight: 100
+        preference:
             matchExpressions:
             - key: project
               operator: In
