@@ -17,6 +17,8 @@ spec:
         project: roboshop
         purpose: tolerations-demo
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: ip-192-168-24-134.ec2.internal
       containers:
       - name: nginx
         image: nginx:latest
