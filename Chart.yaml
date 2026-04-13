@@ -1,6 +1,0 @@
-apiVersion: v2
-name: nginx # chart name
-version: 1.0.1 # chart version
-#description: nginx helm chart
-description: upgrading to stabel-perl version
-appVersion: stabel-perl # this is application version

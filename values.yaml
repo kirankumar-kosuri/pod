@@ -1,7 +1,0 @@
-deployment:
-  replicas: 5
-  imageVersion: stabel-bookworm-perl
-
-service:
-  type: LoadBalancer
-  servicePort: 80
